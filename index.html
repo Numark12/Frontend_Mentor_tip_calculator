@@ -8,31 +8,58 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 <link rel="stylesheet" href="main.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 <body>
 <main class="calculator">
   <div class="inner">
-    <div class="input">  Bill
+  
+  <!--ESTE ES EL INPUT -->
+    <div class="input">  
 
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
-    
-      Number of People</div>
-    <div class="display">  Tip Amount
-      / person
-    
-      Total
-      / person
-    
-      Reset</div>
+        <div>Bill</div>
+        <div class="visor">
+          <div></div>
+          <div></div>
+        </div>
+        
+        <div class="tip">Select Tip %</div>
+
+    <div class="pad">
+        <div class="two">5%</div>
+        <div class="three">10%</div>
+        <div class="four">15%</div>
+        <div class="five">25%</div>
+        <div class="seven">50%</div>
+        <div class="eight">Custom</div>
+
+    </div>
+    <div >
+      <div class="nine">Number of People</div>
+      <div>can't be zero</div>
+    </div>
+    <div class="input_ppl"></div>
+  </div> 
+
+  <!-- ESTE ES EL DISPLAY -->
+    <div class="display"> 
+      <div class="amount">
+        <div>
+          <div>Tip Amount</div>
+          <div>/ person</div>  
+        </div>
+        <div>0.00</div>
+      </div>
+      <div  class="total">
+        <div>
+          <div>Total</div>
+          <div>/ person</div>  
+        </div>
+        <div>0.00</div>
+      </div>   
+      <div class="reset"><span>RESET</span></div>
   </div>
+</div>
+
 </main>
 
 

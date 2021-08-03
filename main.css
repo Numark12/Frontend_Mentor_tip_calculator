@@ -45,4 +45,44 @@ body {
     background-color: hsl(183, 100%, 15%);
     border-radius: 10px;
 }
+/* CSS DEL INPUT */
+.pad {
+    border: 1px solid black;
+    display: grid;
+    height: 10em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .pad > div {
+      border: 1px solid black;
+      height: 2em;
+  }
 
+/* CSS DEL DISPLAY */
+.amount {
+    border: 1px solid black;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 20em;
+}
+.total {
+    border: 1px solid black;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 20em;
+}
+
+.reset {
+    border-radius: 5px;
+    height: 2em;
+    margin:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    background-color: hsl(184, 14%, 56%);
+    color: hsl(189, 41%, 97%);
+}
