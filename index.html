@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
   <!--ESTE ES EL INPUT -->
     <div class="input">  
 
-        <div>Bill</div>
+        <div class="bill">Bill</div>
         <div class="visor">
           <div></div>
           <div></div>
@@ -25,19 +26,18 @@
         <div class="tip">Select Tip %</div>
 
     <div class="pad">
-        <div class="two">5%</div>
-        <div class="three">10%</div>
-        <div class="four">15%</div>
-        <div class="five">25%</div>
-        <div class="seven">50%</div>
-        <div class="eight">Custom</div>
-
+        <button class="upper">5%</button>
+        <button class="upper">10%</button>
+        <button class="upper">15%</button>
+        <button class="bottom">25%</button>
+        <button class="bottom">50%</button>
+        <input class="custom bottom" placeholder="Custom">
     </div>
-    <div >
+    <div class="ppl">
       <div class="nine">Number of People</div>
       <div>can't be zero</div>
     </div>
-    <div class="input_ppl"></div>
+    <input class="input_ppl">
   </div> 
 
   <!-- ESTE ES EL DISPLAY -->
@@ -45,16 +45,16 @@
       <div class="amount">
         <div>
           <div>Tip Amount</div>
-          <div>/ person</div>  
+          <div class="pers">/ person</div>  
         </div>
-        <div>0.00</div>
+        <div class="zero">0.00</div>
       </div>
       <div  class="total">
         <div>
           <div>Total</div>
-          <div>/ person</div>  
+          <div class="pers">/ person</div>  
         </div>
-        <div>0.00</div>
+        <div class="zero">0.00</div>
       </div>   
       <div class="reset"><span>RESET</span></div>
   </div>

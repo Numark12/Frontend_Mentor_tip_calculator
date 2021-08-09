@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: hsl(185, 41%, 84%);
+    background-color: hsl(185, 41%, 84%);   
+    font-family: 'Space Mono', monospace;
 }
 .calculator {
     display: flex;
@@ -24,18 +25,27 @@ body {
     flex-wrap: nowrap;
     background-color: hsl(0, 0%, 100%);
     border-radius: 20px;
-   
 }
 
 .input {
     width: 380px;
-    height: 310px;
-    border: 1px solid black;
+    height: 280px;
+    border: 1px solid red;
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
+    padding: 1em;
 }
-
+.bill {
+    font-size: 11px;
+    color:  hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+.tip {
+    font-size: 11px;
+    color:  hsl(183, 100%, 15%);
+    font-weight: 700;
+}
 .display {
     width: 380px;
     height: 310px;
@@ -46,43 +56,103 @@ body {
     border-radius: 10px;
 }
 /* CSS DEL INPUT */
+.visor {
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 2em;
+    margin-bottom: 1em;
+}
 .pad {
     border: 1px solid black;
     display: grid;
-    height: 10em;
+    height: 5.7em;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 2.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
-  .pad > div {
+  .pad > button {
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 5px;
       border: 1px solid black;
-      height: 2em;
+      height: 2.5em;
   }
 
+  .pad > input {
+    border: 1px solid black;
+    height: 2.85em;
+    width: 6.7em;
+    border-radius: 5px;
+}
+  button > .bottom {
+    margin-bottom: 50px;
+}
+
+.ppl {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 11px;
+    color: gray;
+    font-weight: 700;
+
+}
+
+.input_ppl {
+    width: 22em;
+    height: 2.5em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
 /* CSS DEL DISPLAY */
+
+.display > div {
+    font-size: 11px;
+}
+ 
+.pers {
+    font-size: 10px;
+}
 .amount {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
     border: 1px solid black;
     display: inline-flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 20em;
+    width: 24em;
 }
 .total {
+    margin-left: 1em;
     border: 1px solid black;
     display: inline-flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 20em;
+    width: 24em;
+}
+.zero {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .reset {
+    border: 1px solid black;
     border-radius: 5px;
-    height: 2em;
+    height: 3em;
     margin:10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50%;
+    margin-top: 55%;
     background-color: hsl(184, 14%, 56%);
     color: hsl(189, 41%, 97%);
+}
+.reset > span {
+    font-size: 1.3em;
+    font-weight: bold;
 }
