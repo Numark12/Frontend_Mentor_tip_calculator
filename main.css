@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: hsl(185, 41%, 84%);   
+    /* background-color: hsl(185, 41%, 84%);    */
+    background-color: wheat;
     font-family: 'Space Mono', monospace;
 }
 .calculator {
