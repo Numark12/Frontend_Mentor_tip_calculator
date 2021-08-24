@@ -57,13 +57,25 @@ body {
 }
 /* CSS DEL INPUT */
 .visor {
+    width: 17em;
+    height: 2em;
     border-radius: 5px;
     border: 1px solid black;
-    height: 2em;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 1em;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
     margin-bottom: 1em;
 }
+
+.visor::placeholder {
+    text-align: right;
+}
+
 .pad {
-    border: 1px solid black;
+    /* border: 1px solid rgb(103, 62, 180); */
     display: grid;
     height: 5.7em;
     grid-template-columns: repeat(3, 1fr);
@@ -73,20 +85,40 @@ body {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
+
   .pad > button {
       font-size: 16px;
       font-weight: 700;
       border-radius: 5px;
-      border: 1px solid black;
+      border: none;
       height: 2.5em;
+      background-color: hsl(185, 64%, 16%);
+      color: lightcyan;
   }
+/* .pad> button:active {
+    border: none;
+    font-size: 97%;
+} */
 
+.pad> button:focus {
+    background-color: hsl(185, 41%, 84%);
+
+    color: hsl(185, 64%, 16%);
+}
+
+/* BOTONERA */
   .pad > input {
-    border: 1px solid black;
+    border: 1px solid rgb(34, 33, 34);
     height: 2.85em;
     width: 6.7em;
     border-radius: 5px;
 }
+
+  .pad > input:hover {
+        background-color: hsl(185, 45%, 94%); 
+    }
+
+
   button > .bottom {
     margin-bottom: 50px;
 }
@@ -97,6 +129,15 @@ body {
     font-weight: bold;
 }
 
+.boton:hover {
+    background-color: hsl(185, 41%, 84%);
+    border: 2px solid hsl(185, 41%, 84%);
+    color: hsl(185, 64%, 16%);
+
+}
+
+
+/* INPUT PERSONAS */
 .ppl {
     display: flex;
     flex-wrap: nowrap;
@@ -157,10 +198,11 @@ body {
    display: flex;
    flex-wrap: wrap;
    border: 1px solid black;
+   font-weight: 600;
 }
 .tot_text > div {
     border: 1px solid black;
-    color:hsl(185, 42%, 90%);;
+    color:hsl(186, 20%, 71%);;
 }
 
 .pers {
