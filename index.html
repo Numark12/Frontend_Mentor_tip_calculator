@@ -27,12 +27,12 @@
         <div class="tip">Select Tip %</div>
 
     <div class="pad">
-        <button class="boton" id="b1" onClick="get_id(this.id)">5%</button>
-        <button class="boton" id="b2" onClick="get_id(this.id)">10%</button>
-        <button class="boton" id="b3" onClick="get_id(this.id)">15%</button>
-        <button class="boton" id="b4" onClick="get_id(this.id)">25%</button>
-        <button class="boton" id="b5" onClick="get_id(this.id)">50%</button>
-        <input class="custom bottom" placeholder="Custom" id="custom">
+        <button class="boton" id="b1" onmouseover="perc_id(this.id)" onmouseup="calculo()">5%</button>
+        <button class="boton" id="b2" onmouseover="perc_id(this.id)" onmouseup="calculo()">10%</button>
+        <button class="boton" id="b3" onmouseover="perc_id(this.id)" onmouseup="calculo()">15%</button>
+        <button class="boton" id="b4" onmouseover="perc_id(this.id)" onmouseup="calculo()">25%</button>
+        <button class="boton" id="b5" onmouseover="perc_id(this.id)" onmouseup="calculo()">50%</button>
+        <input class="custom bottom" placeholder="Custom" id="custom" onkeyup="calcustom()">
     </div>
     <div class="ppl">
       <div class="nine">Number of People</div>
@@ -70,6 +70,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <script src="app.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
