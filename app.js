@@ -62,8 +62,9 @@ function calcustom(){
     
     final = [perc]
     cuenta = [document.getElementById("bill").value, document.getElementById("pers").value]
-    let tip =  parseFloat(((cuenta[0]*final[0])/cuenta[1]).toFixed(2)) 
+    let tip =  parseFloat(((cuenta[0]*final[0])/cuenta[1]).toFixed(2)); 
     let factura = parseFloat((cuenta[0]/cuenta[1]).toFixed(2)) + tip;
+    
     propina.innerHTML = tip;
     boleta.innerHTML=  factura;
 }
