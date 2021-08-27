@@ -19,9 +19,9 @@
     <div class="input">  
 
         <div class="bill">Bill</div>
-        <input class="visor" placeholder="0" id="bill">
+        <input class="visor" placeholder="0" id="bill" onkeyup="habilite_ppl()">
           <div></div>
-          <div></div>
+          <!-- <div></div> -->
         </input>
         
         <div class="tip">Select Tip %</div>
@@ -38,7 +38,7 @@
       <div class="nine">Number of People</div>
       <div>can't be zero</div>
     </div>
-    <input class="input_ppl"  placeholder="0" id="pers">
+    <input class="input_ppl"  placeholder="0" id="pers" onkeyup="habilite_cstm()" >
   </div> 
 
   <!-- ESTE ES EL DISPLAY -->
@@ -57,7 +57,7 @@
         </div>
         <div class="zero" id="pers_bill">0.00</div>
       </div>   
-      <div class="reset"><span>RESET</span></div>
+      <div class ="reset" id="reset"><span>RESET</span></div>
   </div>
 </div>
 

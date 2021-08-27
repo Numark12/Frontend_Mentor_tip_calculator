@@ -57,6 +57,7 @@ body {
     border-radius: 10px;
 }
 /* CSS DEL INPUT */
+
 .visor {
     width: 17em;
     height: 2em;
@@ -69,6 +70,10 @@ body {
     font-family: 'Space Mono', monospace;
     color: hsl(183, 100%, 15%);
     margin-bottom: 1em;
+    background-image: url("images/icon-dollar.svg");
+    background-size: 0.6em;
+    background-repeat: no-repeat;
+    background-position: 1rem;
 }
 
 .visor::placeholder {
@@ -167,6 +172,10 @@ body {
     padding-right: 1em;
     font-family: 'Space Mono', monospace;
     color: hsl(183, 100%, 15%);
+    background-image: url("images/icon-person.svg");
+    background-size: 0.6em;
+    background-repeat: no-repeat;
+    background-position: 1rem;
 }
 .input_ppl::placeholder {
     text-align: right;
@@ -183,7 +192,7 @@ body {
     margin-top: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: inline-flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -192,7 +201,7 @@ body {
 }
 .total {
     margin-left: 1em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: inline-flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -203,25 +212,33 @@ body {
 .tot_text {
    height: 3.5em;
    width: 7em;
+   max-width: 7em;
    display: flex;
    flex-wrap: wrap;
-   border: 1px solid black;
+   /* border: 1px solid black; */
    font-weight: 600;
 }
 .tot_text > div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color:hsl(186, 20%, 71%);;
 }
 
 .pers {
     font-size: 10px;
-    color:hsl(185, 64%, 16%);
+    color:hsl(143, 27%, 55%);
 }
+
 .zero {
     font-size: 37px;
     font-weight: 700;
-    border: 1px solid black;
-    color: hsl(184, 14%, 56%);
+    width: 5em;
+    max-width: 5em;
+    text-align: right;
+    /* border: 1px solid black; */
+    color: hsl(143, 27%, 55%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
 }
 
 .reset {

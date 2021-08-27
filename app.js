@@ -9,6 +9,14 @@ var custom = document.getElementById("custom");
 var final = []
 var cuenta = []
 
+document.getElementById("custom").disabled = true;
+document.getElementById("pers").disabled = true;
+function habilite_cstm(){
+    document.getElementById("custom").disabled = false;
+}
+function habilite_ppl(){
+document.getElementById("pers").disabled = false;
+}
 
 // con esta función tomo el id del botón al pasar el mouse por encima del botón
 
@@ -53,6 +61,9 @@ function calculo(){
         let factura = parseFloat((cuenta[0]/cuenta[1]).toFixed(2)) + tip;
         propina.innerHTML = tip;
         boleta.innerHTML=  factura;
+
+        document.getElementById("custom").value = ""
+        document.getElementById("custom").placeholder = "Custom"
 }
 
 
@@ -63,12 +74,22 @@ function calcustom(){
     final = [perc]
     cuenta = [document.getElementById("bill").value, document.getElementById("pers").value]
     let tip =  parseFloat(((cuenta[0]*final[0])/cuenta[1]).toFixed(2)); 
-    let factura = parseFloat((cuenta[0]/cuenta[1]).toFixed(2)) + tip;
-    
+    let factura = (parseFloat((cuenta[0]/cuenta[1]).toFixed(2)) + tip).toFixed(2);
+
+  
     propina.innerHTML = tip;
-    boleta.innerHTML=  factura;
+    boleta.innerHTML=  factura;  
 }
 
 
+const reset = document.getElementById("reset");
+reset.addEventListener("click", function(){
+    document.getElementById("custom").value = ""
+    document.getElementById("custom").placeholder = "Custom"
+    document.getElementById("bill").value = ""
+    document.getElementById("bill").placeholder = "0"
+    document.getElementById("pers").value = ""
+    document.getElementById("pers").placeholder = "0"
+});
 
 
