@@ -66,7 +66,7 @@ function calculo(){
         document.getElementById("custom").placeholder = "Custom"
 }
 
-
+// Función para calcular valor personalizado
 function calcustom(){
     
     let perc = (document.getElementById("custom").value)*0.01;
@@ -82,6 +82,31 @@ function calcustom(){
 }
 
 
+// Función del display "can't be zero"
+function showDisclaim(){
+    document.getElementById("bill").disabled=true;
+    document.getElementById("disclaim").style.display="flex"
+}
+
+function hide(){
+    const disclaim = document.getElementById("disclaim")
+    const pplNotZero = document.getElementById("pers").value;
+    if(pplNotZero!=""){
+        disclaim.style.display="none";
+    }
+}
+
+// disclaim.addEventListener("input", function(){
+
+//         console.log("hi")
+//     if(disclaim.value!=""){
+//         console.log("hi")
+//         disclaim.style.display="none";
+//     }
+// });
+
+
+// Función del reset
 const reset = document.getElementById("reset");
 reset.addEventListener("click", function(){
     document.getElementById("custom").value = ""
@@ -90,6 +115,7 @@ reset.addEventListener("click", function(){
     document.getElementById("bill").placeholder = "0"
     document.getElementById("pers").value = ""
     document.getElementById("pers").placeholder = "0"
-});
+    document.getElementById("bill").disabled=false;
 
+}); 
 

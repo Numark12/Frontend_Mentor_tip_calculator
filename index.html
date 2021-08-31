@@ -36,9 +36,9 @@
     </div>
     <div class="ppl">
       <div class="nine">Number of People</div>
-      <div>can't be zero</div>
+      <div class="disclaim" id="disclaim">can't be zero</div>
     </div>
-    <input class="input_ppl"  placeholder="0" id="pers" onkeyup="habilite_cstm()" >
+    <input class="input_ppl"  placeholder="0" id="pers" onkeyup="habilite_cstm(), hide()" onfocus="showDisclaim()"> 
   </div> 
 
   <!-- ESTE ES EL DISPLAY -->

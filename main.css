@@ -160,7 +160,10 @@ body {
     font-weight: 700;
 
 }
-
+.disclaim {
+    color:red;
+    display: none;
+}
 .input_ppl {
     width: 17em;
     height: 2em;
@@ -180,6 +183,9 @@ body {
 .input_ppl::placeholder {
     text-align: right;
 }
+
+
+
 /* CSS DEL DISPLAY */
 
 .display > div {
@@ -242,8 +248,7 @@ body {
 }
 
 .reset {
-    border: 1px solid black;
-    border-radius: 5px;
+   border-radius: 5px;
     height: 3em;
     margin:10%;
     display: flex;
@@ -252,8 +257,16 @@ body {
     margin-top: 45%;
     background-color: hsl(184, 14%, 56%);
     color: hsl(189, 41%, 97%);
+    /* transition: 0.2s ease-in-out; */
 }
+
+.reset:hover {
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(186, 20%, 71%);
+}
+
 .reset > span {
+    
     font-size: 1.3em;
     font-weight: bold;
 }
