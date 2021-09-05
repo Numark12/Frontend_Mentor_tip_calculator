@@ -12,17 +12,17 @@
 
 </head>
 <body>
-<main class="calculator">
+  <h1>SPLI<br>TTER</h1>
+
+  <main class="calculator">
   <div class="inner">
   
   <!--ESTE ES EL INPUT -->
-    <div class="input">  
-
+  <div class="input">  
+        <div class="bill_wrap">
         <div class="bill">Bill</div>
-        <input class="visor" placeholder="0" id="bill" onkeyup="habilite_ppl()">
-          <div></div>
-          <!-- <div></div> -->
-        </input>
+        <input type="text" class="visor" placeholder="0" id="bill" onkeyup="hide()">
+    </div>
         
         <div class="tip">Select Tip %</div>
 
@@ -38,7 +38,7 @@
       <div class="nine">Number of People</div>
       <div class="disclaim" id="disclaim">can't be zero</div>
     </div>
-    <input class="input_ppl"  placeholder="0" id="pers" onkeyup="habilite_cstm(), hide()" onfocus="showDisclaim()"> 
+    <input class="input_ppl"  placeholder="0" id="pers" onkeyup="hide()" onfocus="showDisclaim()"> 
   </div> 
 
   <!-- ESTE ES EL DISPLAY -->
@@ -67,8 +67,8 @@
 
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+    Coded by <a href="https://www.frontendmentor.io/profile/Numark12" target="_blank">Numark12</a>.
   </div>
   <script defer src="app.js"></script>
 </body>

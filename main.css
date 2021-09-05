@@ -11,17 +11,26 @@ body {
     background-color: hsl(185, 41%, 84%);   
     font-family: 'Space Mono', monospace;
 }
+
+h1 {
+    letter-spacing: 0.5em;
+    font-size: 1.5em;
+    color: hsl(186, 14%, 43%);
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .calculator {
     display: flex;
     justify-content: center; 
-    margin-top: 15%;
     
 }
 
 .inner {
     width: 680px;
     height: 350px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-wrap: nowrap;
     background-color: hsl(0, 0%, 100%);
@@ -31,11 +40,16 @@ body {
 .input {
     width: 380px;
     height: 280px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
     padding: 1em;
+}
+
+.bill_wrap {
+    height: 4.5em;
+    /* border: 1px solid black; */
 }
 .bill {
     font-size: 11px;
@@ -50,19 +64,20 @@ body {
 .display {
     width: 380px;
     height: 310px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 20px;
     margin-right: 20px;
     background-color: hsl(183, 100%, 15%);
     border-radius: 10px;
 }
+
 /* CSS DEL INPUT */
 
 .visor {
     width: 17em;
     height: 2em;
     border-radius: 5px;
-    border: 1px solid black;
+    border: none;
     font-size: 16px;
     font-weight: bold;
     text-align: right;
@@ -74,10 +89,16 @@ body {
     background-size: 0.6em;
     background-repeat: no-repeat;
     background-position: 1rem;
+    cursor: pointer;
 }
 
 .visor::placeholder {
     text-align: right;
+}
+
+.visor:focus {
+    outline: none !important;
+    border: 1.5px solid rgb(112, 168, 150);
 }
 
 .pad {
@@ -90,7 +111,7 @@ body {
     margin-bottom: 2.5em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   .pad > button {
@@ -109,22 +130,29 @@ body {
 } */
 
 .pad> button:focus {
-    background-color: hsl(185, 41%, 84%);
+    background-color: hsl(167, 32%, 62%);
 
     color: hsl(185, 64%, 16%);
 }
 
 /* BOTONERA */
   .pad > input {
-    border: 1px solid rgb(34, 33, 34);
-    height: 2.45em;
+    border: 2px solid rgb(71, 69, 71);
+    height: 2.29em;
     width: 5.5em;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 700;
     text-align: center;
     font-family: 'Space Mono', monospace;   
+    cursor: pointer;
+    
 }
+
+    .pad > input:focus {
+        border: 1.5px solid rgb(182, 240, 200);
+        outline: none !important;
+    }
 
   .pad > input:hover {
         background-color: hsl(185, 45%, 94%); 
@@ -168,7 +196,7 @@ body {
     width: 17em;
     height: 2em;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 0;
     font-size: 16px;
     font-weight: bold;
     text-align: right;
@@ -179,12 +207,17 @@ body {
     background-size: 0.6em;
     background-repeat: no-repeat;
     background-position: 1rem;
+    cursor: pointer;
 }
 .input_ppl::placeholder {
     text-align: right;
 }
 
-
+.input_ppl:focus { 
+    outline: none !important;
+    border:1px solid rgb(236, 153, 153);
+    /* box-shadow: 0 0 10px #e99999; */
+}
 
 /* CSS DEL DISPLAY */
 
@@ -257,7 +290,7 @@ body {
     margin-top: 45%;
     background-color: hsl(184, 14%, 56%);
     color: hsl(189, 41%, 97%);
-    /* transition: 0.2s ease-in-out; */
+    cursor: pointer;
 }
 
 .reset:hover {
@@ -269,4 +302,76 @@ body {
     
     font-size: 1.3em;
     font-weight: bold;
+}
+
+.attribution {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+/* MOBILE MEDIA QUERIES */
+@media (max-width: 600px) {
+
+    .inner{
+        width: 300px;
+        height: 610px;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .input {
+        width: 380px;
+        height: 280px;
+        margin-left: 15px;
+    }
+    .visor {
+        width: 14em;
+    }
+    .pad {
+        display: grid;
+        height: 5.7em;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 10px;
+        grid-template-rows: repeat(3, 1fr);
+        margin-bottom: 5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    .pad > button {
+        font-size: 16px;
+        font-weight: 700;
+        width: 7em;
+    }
+    .input_ppl {
+        width: 14em;
+    }   
+    .pad > input {
+        border: 2px solid rgb(71, 69, 71);
+        height: 2.29em;
+        width: 6.7em;
+    }
+
+    .display {
+        width: 250px;
+        height: 200px;
+        /* border: 1px solid black; */
+        margin-top: none;
+        margin-left: 25px;
+        padding-left: 5px;
+        
+    }
+    .total{
+        width: 20em;
+    }
+    .amount{
+        width: 20em;
+    }
+    .zero {
+        font-size: 30px;
+    }
+
+    .reset {
+         margin-top: 17%;
+    }
 }
